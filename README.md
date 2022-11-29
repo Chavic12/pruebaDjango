@@ -1,1 +1,1 @@
-# pruebaDjango
+# Primeros pasos en Django
