@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+<div class="contenedor">
+	
+	<main>
+		<h2>Formulario de Adopción</h2>
+		<form action="/registrarPersonal/" method="POST"> {% csrf_token %}
+			<div class="grupoinput">
+				<label for="nombre">Nombres <span class="colorRojo">*</span></label>
+				<input type="text" id="nombre" name="nombre" placeholder="Ingrese sus nombres" required>
+			</div>
+			<div class="grupoinput">
+				<label for="apellido">Apellidos</label>
+				<input type="text" id="apellido" name="apellido" placeholder="Ingrese sus apellidos">
+			</div>
+			<div class="grupoinput">
+				<label for="correo">Correo</label>
+				<input type="email" id="correo" name="correo" placeholder="Ingrese su correo">
+			</div>
+			<div class="grupoinput">
+				<label for="cedula">Cedula</label>
+				<input type="number" id="cedula" name="cedula" placeholder="Ingrese su cedula">
+			</div>
+			<div class="grupoinput">
+				<label for="direccion">Dirección</label>
+				<input type="text" id="direccion" name="direccion" placeholder="Ingrese su direccion">
+			</div>
+			<div class="grupoinput">
+				<label for="telefono">Telefono</label>
+				<input type="text" id="telefono" name="telefono" placeholder="Ingrese su telefono">
+			</div>
+			<button type="submit" class="button">Guardar Datos</button>
+		</form>
+	</main>
+	
+</div>
+
+{% endblock %}

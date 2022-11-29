@@ -1,0 +1,244 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: rgba(215, 211, 211, 0.3);
+	font-family: 'Poppins', sans-serif;
+}
+.contenedor{
+	width: 90%;
+	max-width: 1800px;
+	margin: 0 auto;
+
+	display: grid;
+	grid-gap: 0px;
+	grid-template-columns: repeat(2, 1fr);
+
+	grid-template-rows: repeat28, auto2;
+	grid-template-areas: "header  header"
+						 "slider slider"
+						 "titulo1 titulo1"
+						 "adopta1 adopta2"
+						 "titulo2 titulo2"
+						 "doctor doctor"	
+						 "sponsor sponsor"
+						 "footer footer";	
+}
+/*---------------------------------------------*/
+/*                  header                     */
+/*---------------------------------------------*/
+.contenedor .cabeceraPrincipal{
+	grid-area: header;
+	background-color: #B5EF8A;
+	display: flex;
+	justify-content: space-between;
+}
+.contenedor .cabeceraPrincipal .logotipo{
+	padding: 10px 40px;
+}
+
+/*---------------------------------------------*/
+/*              menuPrincipal                  */
+/*---------------------------------------------*/
+.contenedor .cabeceraPrincipal .menuPrincipal{
+	display: flex;
+	align-items: center;
+}
+.menuPrincipal a{
+	text-decoration: none;
+	padding: 0 20px;
+	transition-duration: 0.4s;	
+}
+.menuPrincipal a:hover{
+	background-color: #65524D;
+	color: #fff;
+}
+
+/*---------------------------------------------*/
+/*             Slider principal                */
+/*---------------------------------------------*/
+.contenedor .sliderPrincipal{
+	grid-area: slider;
+	background-color: #fff;
+}
+.contenedor .sliderPrincipal img{
+	width: 100%;
+}
+
+/*---------------------------------------------*/
+/*               Contenido Main                */
+/*---------------------------------------------*/
+main{
+	grid-area: slider;
+	margin: 0 auto;
+	width: 90%;
+	padding: 2em 0;
+}
+main h2{
+	color: #817E9F;
+	font-size: 2em;
+}
+main p{
+	color: #605B5B;
+	font-size: 1em;
+	line-height: 30px;
+}
+
+/*---------------------------------------------*/
+/*                    Adopcion                 */
+/*---------------------------------------------*/
+.contenedor .titulo{
+	grid-area: titulo1;
+	text-align: center;
+}
+.contenedor .titulo h3{
+	font-size: 32px;
+	padding: 40px 0;
+}
+.contenedor .adopcion1,.contenedor .adopcion2{
+	grid-area: adopta1;
+	display: flex;
+	justify-content: space-between;
+}
+.contenedor .adopcion2{
+	grid-area: adopta2;
+}
+.contenedor .adopcion1 h3,.contenedor .adopcion2 h3{
+	padding: 20px 20px;
+	font-size: 25px;
+}
+.contenedor .adopcion1 p,.contenedor .adopcion2 p{
+	padding: 10px 20px;
+	color: #605B5B;
+}
+.contenedor .doctor{
+	grid-area: doctor;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 1em;
+}
+/*---------------------------------------------*/
+/*                  Doctores                   */
+/*---------------------------------------------*/
+.contenedor .titulo2{
+	grid-area: titulo2;
+	text-align: center;
+	background-color: #fff;
+	font-size: 32px;
+	padding: 40px 0;
+}
+/*---------------------------------------------*/
+/*                  Sponsors                   */
+/*---------------------------------------------*/
+.contenedor .sponsor{
+	grid-area: sponsor;
+	background-color: #333;
+	text-align: center;
+	padding: 1em 0;
+}
+.contenedor .sponsor h3{
+	padding-bottom: 1em;
+	color: #4B4B4B;
+}
+/*---------------------------------------------*/
+/*                 Formularios                 */
+/*---------------------------------------------*/
+main .grupoinput{
+	padding: 0.5em 0;
+}
+ .grupoinput label{
+		display: block;
+		font-size: 1em;
+ }
+.grupoinput input[type=text], .grupoinput input[type=email], .grupoinput input[type=number], .grupoinput input[type=date]{
+	width: 90%;
+	padding: 15px 20px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+/*---------------------------------------------*/
+/*                 Pie Pagina                  */
+/*---------------------------------------------*/
+.contenedor .piePagina{
+	grid-area: footer;
+	background-color: #1B1B1B;
+	display: flex;
+	justify-content: space-between;
+}
+.contenedor .piePagina .derechos{
+	padding: 2em;
+	text-align: center;
+}
+.contenedor .piePagina .derechos h6{
+	color: #A3A3A3;
+}
+.contenedor .piePagina .redesSociales{
+	padding: 2em;
+	font-size: 25px;
+}
+.contenedor .piePagina .redesSociales a{
+	color: #fff;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+
+/*---------------------------------------------*/
+/*                personalizados               */
+/*---------------------------------------------*/
+.colorAzul{
+	color: #817E9F;
+}
+.mayusculas{
+	text-transform: uppercase;
+}
+.colorRojo{
+	color:red;
+}
+.espacio{
+	padding: 2em 0;
+}
+.alerta{
+	color: red;
+}
+.centrado{
+	text-align: center;
+}
+/*---------------------------------------------*/
+/*                   Botones                  */
+/*---------------------------------------------*/
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 9px;
+}
+.button:hover {
+  background-color: #3C8F40;
+  color: white;
+}
+.button1 {
+  background-color: #D7F171; 
+  color: #494949; 
+  border: 0px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.derecha{
+	text-align: right;
+	padding: 10px;
+}

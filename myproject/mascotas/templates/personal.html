@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Gestion de Adoptados {% endblock %}
+
+{% block content %}
+
+
+    <div>
+        <h1>Listado del personal</h1>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                         <th scope="col">Nombre</th>
+                         <th scope="col">Apellido</th>
+                         <th scope="col">Correo</th>
+                         <th scope="col">Cedula</th>
+                         <th scope="col">Direccion</th>
+                         <th scope="col">Telefono</th>
+                        <th colspan="2">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in personal %}
+                    <tr>
+                        <td>{{p.nombres}}</td>
+                        <td>{{p.apellidos}}</td>
+                        <td>{{p.correo}}</td>
+                        <td>{{p.cedula}}</td>
+                        <td>{{p.direccion}}</td>
+                        <td>{{p.telefono}}</td>
+                        <td><a href="eliminarPersonal/{{p.id}}" class="btn btn-danger">Eliminar</a></td>
+                    </tr>
+                    
+                {% endfor %}
+                </tbody>
+            
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
+
+
+
+

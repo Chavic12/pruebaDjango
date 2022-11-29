@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+<section class="sliderPrincipal">
+    <img src="{% static 'img/slider1.jpg' %}" title="Slider">
+</section>
+<section class="titulo"><h3 class="colorAzul mayusculas">Adopción</h3></section>
+<section class="adopcion1">
+    <img src="{% static 'img/dog1.jpg' %}" title="Firulais" descrition="Perro en adopcion">
+    <article class="card1">
+        <h3 class="mayusculas colorAzul">Firulais</h3>
+        <p class="derecha">Snares are silent killers laid by poachers across wild places to trap and kill animals for the illegal bushmeat tradeSnares are silent killers laid by poachers across wild places to trap and kill animals for the illegal bushmeat trade</p>
+        <div class="derecha">
+        <button class="button button1">Más Información</button>
+        </div>
+    </article>
+</section>
+
+<section class="adopcion2">
+    <img src="{% static 'img/dog2.jpg' %}" title="Bingo">
+    <article class="card1">
+        <h3 class="mayusculas colorAzul">Bingo</h3>
+        <p>Snares are silent killers laid by poachers across wild places to trap and kill animals for the illegal bushmeat tradeSnares are silent killers laid by poachers across wild places to trap and kill animals for the illegal bushmeat trade</p>
+        <div class="derecha">
+        <button class="button button1">Más Información</button>
+        </div>
+    </article>
+</section>
+<section class="titulo2"><h3 class="colorAzul mayusculas">Personal Médico</h3></section>
+<section class="doctor">
+    <img src="{% static 'img/doctor1.jpg' %}">
+    <img src="{% static 'img/doctor2.jpg' %}">
+    <img src="{% static 'img/doctor3.jpg' %}">
+    <img src="{% static 'img/doctor4.jpg' %}">
+</section>
+
+
+{% endblock %}
