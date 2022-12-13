@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-4 offset-md-4"></div>
+    <h2>Edición de Adopción</h2>
+    <div class="card">
+        <div class="card-body">
+            <form action="/editarPersonal/" method="POST"> {% csrf_token %}
+                <input type="hidden" name="s_id" id="s_id" value="{{adopcion.id}}"/>
+                <div class="grupoinput">
+                    <label for="nombre">Nombres <span class="colorRojo">*</span></label>
+                    <input type="text" id="nombre" name="nombre" value="{{adopcion.nombres}}" required>
+                </div>
+                <div class="grupoinput">
+                    <label for="apellido">Apellidos</label>
+                    <input type="text" id="apellido" name="apellido" value="{{adopcion.apellidos}}"/>
+                </div>
+                <div class="grupoinput">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" value="{{adopcion.correo}}"/>
+                </div>
+                <div class="grupoinput">
+                    <label for="cedula">Cedula</label>
+                    <input type="number" id="cedula" name="cedula" value="{{adopcion.cedula}}"/>
+                </div>
+                <div class="grupoinput">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" value="{{adopcion.direccion}}"/>
+                </div>
+                <div class="grupoinput">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" id="telefono" name="telefono" value="{{adopcion.telefono}}"/>
+                </div>
+                <button type="submit" class="button">Guardar Datos</button>
+            </form>
+        </div>
+    </div>
+		
+</div>
+
+{% endblock %}

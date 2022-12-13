@@ -18,10 +18,13 @@ from django.urls import path
 from mascotas import views
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('home', views.home),
     path('adopcion', views.adopcion),
     path('personal', views.personal),
     path('registrarPersonal/', views.registrarPersonal),
-    path('eliminarPersonal/<id>', views.eliminarPersonal),
+    path('eliminarPersonal/<pk>', views.eliminarPersonal),
+    path('edicionPersonal/<pk>', views.edicionPersonal),
+    path('editarPersonal/', views.editarPersonal),
     path('', views.home),
 ]

@@ -25,10 +25,29 @@ def registrarPersonal(request):
     return redirect('/home')
 
 
-def eliminarPersonal(request, id):
-    adopcion = Adopcion.objects.get(id=id)
+def eliminarPersonal(request, pk):
+    adopcion = Adopcion.objects.get(id=pk)
     adopcion.delete()
-    return redirect('/home')
+    return redirect('/personal')
+
+
+def edicionPersonal(request, pk):
+    adopcion = Adopcion.objects.get(id=pk)
+    return render(request, 'editar.html', {'adopcion': adopcion})
+
+def editarPersonal(request):
+    pk = request.POST.get('s_id')
+    adopcion = Adopcion.objects.get(id=pk)
+    adopcion.nombres = request.POST.get('nombre', False)
+    adopcion.apellidos = request.POST.get('apellido', False)
+    adopcion.correo = request.POST.get('correo', False)
+    adopcion.cedula = request.POST.get('cedula', False)
+    adopcion.direccion = request.POST.get('direccion', False)
+    adopcion.telefono = request.POST.get('telefono', False)
+    
+    adopcion.save()
+    return redirect('/personal')
+
 
 
 
